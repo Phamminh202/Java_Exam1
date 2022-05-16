@@ -20,6 +20,7 @@ public class DetailCustomerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String rollNumber = req.getParameter("id");
+        req.setAttribute("title", "Detail Customer");
 
         Customer customer = customerModel.findById(rollNumber);
 

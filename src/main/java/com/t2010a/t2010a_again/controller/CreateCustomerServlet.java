@@ -23,6 +23,7 @@ public class CreateCustomerServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("customer", new Customer());
         req.setAttribute("action", 1);
+        req.setAttribute("title", "Create Customer");
         req.getRequestDispatcher("/admin/customers/form.jsp").forward(req,resp);
     }
 
@@ -41,6 +42,7 @@ public class CreateCustomerServlet extends HttpServlet {
         if (customerModel.save(customer) != null){
             resp.sendRedirect("/admin/customers/list");
         }else {
+            req.setAttribute("title", "Create Customer");
             req.getRequestDispatcher("/admin/customers/form.jsp").forward(req,resp);
         }
     }

@@ -31,6 +31,7 @@ public class EditCustomerServlet extends HttpServlet {
         }else {
             req.setAttribute("customer",customer);
             req.setAttribute("action",2);
+            req.setAttribute("title", "Edit Customer");
             req.getRequestDispatcher("/admin/customers/form.jsp").forward(req,resp);
         }
     }
@@ -57,6 +58,7 @@ public class EditCustomerServlet extends HttpServlet {
             } else {
                 req.setAttribute("customer", customer);
                 req.setAttribute("action", 2);
+                req.setAttribute("title", "Edit Customer");
                 req.getRequestDispatcher("/admin/customers/form.jsp").forward(req, resp);
             }
             
