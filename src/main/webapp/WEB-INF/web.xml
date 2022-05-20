@@ -70,4 +70,12 @@
         <servlet-name>DeleteCustomer</servlet-name>
         <url-pattern>/admin/customers/delete</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>RecentViewCustomer</servlet-name>
+        <servlet-class>com.t2010a.t2010a_again.controller.RecentViewCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecentViewCustomer</servlet-name>
+        <url-pattern>/admin/customers/recentView</url-pattern>
+    </servlet-mapping>
 </web-app>
